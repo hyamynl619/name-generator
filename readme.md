@@ -19,7 +19,7 @@ The screen will prompt if the player would like to play again.
 
 # Packages Used
 
-Python
-Sys
-Random
+-Python
+-Sys
+-Random
 
