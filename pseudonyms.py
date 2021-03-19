@@ -1,5 +1,7 @@
 ### Import packages ###
-import sys, random, time
+import sys
+import random
+import time
 
 # Main Screen
 print("~~~ Welcome to My Hero Academia! ~~~")
@@ -9,32 +11,34 @@ print('\n\n'"~~~ PULL THE LEVER! ~~~")
 
 time.sleep(4)
 
+
 def progress_bar(secs, size=10):
     for i in range(size + 1):
-        print('[{:<{}}]{}'.format('X' * i, size, '\b' * (size + 2)), end='', flush=True)
+        print('[{:<{}}]{}'.format('X' * i, size,
+                                  '\b' * (size + 2)), end='', flush=True)
         time.sleep(secs)
     print()
+
 
 print('Loading: ', end='', flush=True)
 progress_bar(1.0)
 
 
-
-#First Name List = Quirk 22
+# First Name List = Quirk 22
 first = ('Brainwashing', 'Explosion', 'Erasure', 'Half Cold-Half Hot',
-'Acid', 'Pop Off', 'Metal Tail', 'Gravity Control',
-'Laser Eyes', 'All for One', 'One for All', 'Rewind',
-'Warp Gate', 'Overhaul', 'Decay', 'Manifest', 'Fierce Wings',
-'HellFlame', 'Healing', 'Search', 'Transform', 'Creation')
+         'Acid', 'Pop Off', 'Metal Tail', 'Gravity Control',
+         'Laser Eyes', 'All for One', 'One for All', 'Rewind',
+         'Warp Gate', 'Overhaul', 'Decay', 'Manifest', 'Fierce Wings',
+         'HellFlame', 'Healing', 'Search', 'Transform', 'Creation')
 
-#Last Name List = Hero Name 22
+# Last Name List = Hero Name 22
 last = ('SenNo', 'Baku', 'Shokyo', 'AttaKai',
-'San', 'Poppu', 'KinZokU', 'Juryoku', 'Reza',
-'Tsuyoi', 'AkuNo', 'Jikan', 'ToraBeru', 'Yami',
- 'Hikari', 'Heiwa', 'Yuki', 'Ajiwau', 'Yoshi',
- 'Masa', 'Haru', 'Iyashi')
+        'San', 'Poppu', 'KinZokU', 'Juryoku', 'Reza',
+        'Tsuyoi', 'AkuNo', 'Jikan', 'ToraBeru', 'Yami',
+        'Hikari', 'Heiwa', 'Yuki', 'Ajiwau', 'Yoshi',
+        'Masa', 'Haru', 'Iyashi')
 
-#Randomize names
+# Randomize names
 while True:
     quirk = random.choice(first)
     heroname = random.choice(last)
@@ -44,8 +48,7 @@ while True:
     print("~~~ Hero Name = {}" .format(heroname), file=sys.stderr)
     print("\n\n")
 
-    #Play again screen or exit
+    # Play again screen or exit
     user_choice = input("\n\nPick Another One? (Press ENTER else n to quit)")
     if user_choice == "n":
         sys.exit()
-
